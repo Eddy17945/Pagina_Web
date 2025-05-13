@@ -595,7 +595,7 @@ footer {
     color: var(--primary-green);
 }
 
-/* Animaciones */
+
 @keyframes floatUpDown {
     0%, 100% {
         transform: translateY(0);
@@ -614,7 +614,7 @@ footer {
     }
 }
 
-/* Responsive */
+
 @media screen and (max-width: 1024px) {
     .nav-links {
         width: 60%;
@@ -654,7 +654,7 @@ footer {
     font-size: 24px;
 }
 
-/* Añadimos estilo para el texto que aparece al hacer hover */
+
 .form-button .tooltip {
     position: absolute;
     right: 70px;
@@ -688,3 +688,159 @@ footer {
         flex-direction: column;
         align-items: center; }
     }
+
+
+.info-table-section {
+    padding: 80px 0;
+    background-color: var(--gray);
+    position: relative;
+}
+
+.info-table-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(var(--primary-green) 2px, transparent 2px),
+        radial-gradient(var(--primary-green) 2px, transparent 2px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    opacity: 0.05;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    border-left: 4px solid var(--primary-green);
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--black); /* Conserva el fondo negro */
+    color: var(--white); /* Texto blanco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-table thead {
+    background: linear-gradient(to right, #4CAF50, #2E7D32); /* Verde más claro */
+    color: var(--white);
+}
+
+.info-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.info-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.info-table tbody tr:hover {
+    background-color: rgba(76, 175, 80, 0.1); /* Verde claro con transparencia */
+}
+
+.info-table tbody tr td:first-child {
+    color: #4CAF50; /* Verde claro para la primera columna */
+    font-weight: bold;
+}
+
+.info-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .info-table th, .info-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+.contenedor-cajas {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--black); /* Fondo oscuro como tu página */
+}
+
+.caja {
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Caja 1: Estilo oscuro con bordes verdes (como tu tabla) */
+.caja-sistematech {
+    border: 2px solid var(--primary-green); /* Borde verde */
+    background-color: rgba(30, 113, 69, 0.1); /* Fondo semitransparente verde oscuro */
+    color: var(--white);
+}
+
+/* Caja 2: Estilo claro con detalles oscuros (contraste) */
+.caja-cloud {
+    border: 2px solid var(--black); /* Borde negro */
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.caja h3 {
+    margin-top: 0;
+    color: var(--primary-green); /* Títulos en verde */
+}
+
+.caja-sistematech h3 {
+    color: var(--light-green); /* Verde más claro para la caja oscura */
+}
+
+.caja p {
+    font-size: 14px;
+}
+
+/* Etiquetas */
+.etiqueta-verde {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.etiqueta-negra {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+    .contenedor-cajas {
+        flex-direction: column;
+    }
+    .caja {
+        width: 100%;
+    }
+}
