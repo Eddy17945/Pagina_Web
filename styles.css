@@ -844,3 +844,14 @@ footer {
         width: 100%;
     }
 }
+
+.destacado-verde {
+    color: #4CAF50;  /* Verde claro */
+    font-weight: bold;
+}
+
+.destacado-cursiva {
+    font-style: italic;
+    text-decoration: underline; /* Opcional: subrayado */
+    color: #FFC107;  /* Amarillo opcional (o usa otro color) */
+}
