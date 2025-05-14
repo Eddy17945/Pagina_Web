@@ -194,7 +194,7 @@ if (prevQuoteBtn && nextQuoteBtn) {
     nextQuoteBtn.addEventListener('click', nextQuote);
     
     // Cambio automático de quotes cada 5 segundos
-    setInterval(nextQuote, 5000);
+    setInterval(nextQuote, 4000);
 }
 
 // Formulario de contacto
